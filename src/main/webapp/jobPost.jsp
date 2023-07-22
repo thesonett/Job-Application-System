@@ -49,7 +49,7 @@
         <div class="formbg-outer">
           <div class="formbg">
             <div class="formbg-inner padding-horizontal--48">
-              <form id="stripe-login" action="jobPost.jsp">
+              <form id="stripe-login" action="jobPostServlet.jsp">
                 <div class="field padding-bottom--24">
                   <label for="role">Job Role</label>
                   <input type="text" name="role">
@@ -83,13 +83,13 @@
     					text-transform: uppercase;
     					font-size: 20px;
 					">Home</a>
-				   <a href="jobPost.jsp" style="
+				   <a href="hireTalent.jsp" style="
     					border: 2px solid lightblue;
     					padding: 8px 25px;
     					text-transform: uppercase;
     					font-size: 20px;
     				">
-    					Refresh
+    					Hire Talent
     				</a>
                 </div>
                 

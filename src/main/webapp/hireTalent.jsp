@@ -10,7 +10,7 @@
 </head>
 <body>
 	<%
-		// Database connection
+		// display database code
 		Class.forName("com.mysql.jdbc.Driver");
 		String username = "root";
 		String password = "";
