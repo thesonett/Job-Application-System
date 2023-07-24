@@ -5,40 +5,12 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Job Application Portal</title>
-<link rel="stylesheet" href="style.css">
+	<title>Job Application System</title>
+	<link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
-	<h1 class="success" style="
-	    display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    margin-top: 35vh;
-	    color: green;
-	    font-size: 2.8rem;
-	">Yehh! Job Post Successful! :D</h1>
-	<div style="
-		display: flex;
-	    justify-content: center;
-	    align-items: center;
-	    margin-top: 3vh;
-	    flex-wrap: wrap;
-	">
-		<a href="index.jsp" style="
-	    	border: 2px solid lightblue;
-	    	padding: 8px 25px;
-	    	text-transform: uppercase;
-	    	font-size: 20px;
-	    	margin: 20px;
-		">Home</a>
-		<a href="hireTalent.jsp" style="
-	    	border: 2px solid lightblue;
-	    	padding: 8px 25px;
-	    	text-transform: uppercase;
-	    	font-size: 20px;
-	    	margin: 20px;
-	    ">Hire Talent</a>
-	</div>
 	<%
 		// insertion database code
 		Class.forName("com.mysql.jdbc.Driver");
@@ -61,7 +33,19 @@
 		query = "INSERT INTO jobApplication (role, description, experience, skills) VALUES ('" + role + "','" + description + "'," + experience + ",'" + skills + "')";    
 		
 		statement.executeUpdate(query);
-
 	%>
+	
+	<div class="toast">
+        <div class="toast-content">
+            <i class="fas fa-solid fa-check check"></i>
+            <div class="message">
+                <span class="text text-1">Success</span>
+                <span class="text text-2">You posted a job application</span>
+            </div>
+        </div>
+        <div class="progress"></div>
+    </div>
+    
+    <button class="success-home"><a href="index.jsp">Go back to home! :D</a></button>
 </body>
 </html>

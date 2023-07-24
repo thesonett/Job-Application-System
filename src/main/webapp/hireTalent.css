@@ -36,7 +36,7 @@ nav {
 
 label.logo {
     color: white;
-    font-size: 30px;
+    font-size: 1.3rem;
     line-height: 80px;
     padding: 0 100px;
     font-weight: bold;
@@ -87,7 +87,6 @@ a:hover {
 
 @media (max-width: 952px) {
     label.logo {
-        font-size: 30px;
         padding-left: 50px;
     }
 
@@ -258,7 +257,7 @@ img {
     text-transform: capitalize;
 }
 
-.details > h2 {
+.details>h2 {
     color: #ffffff;
     font-weight: 600;
     font-size: 30px;

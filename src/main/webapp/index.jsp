@@ -4,18 +4,40 @@
 <html>
 <head>
 <meta charset="ISO-8859-1">
-<title>Job Application Portal</title>
-<link rel="stylesheet" href="style.css">
+	<title>Job Application System</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
-	<section>
-		<div class="container">
-			<h1 class="title">Get Hired or Hire People For Free!</h1>
-			<div class="main-links">
-				<a href="hireTalent.jsp">hire talent</a>
-				<a href="jobPost.jsp">create job post</a>
-			</div>
-		</div>
-	</section>
+	<!-- navigation bar -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Job App</label>
+        <ul>
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="index.jsp">Refresh</a></li>
+        </ul>
+    </nav>
+    
+    <!-- Home page section -->
+    <section class="hero">
+        <div class="row main-container">
+          <div class="column">
+            <h2>Get Hired or Hire People For Free!</h2>
+            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, architecto? Consectetur enim obcaecati velit quibusdam iure, perspiciatis accusantium, voluptatibus possimus cum voluptates dolorum optio ab vitae. Praesentium voluptas quia voluptates at aperiam aliquid vitae autem!</p>
+            <div class="buttons">
+              <button class="btn"><a href="hireTalent.jsp">hire talent</a></button>
+              <button class="btn"><a href="jobPost.jsp">create new job post</a></button>
+            </div>
+          </div>
+          <div class="column">
+            <img src="2.jpg" alt="heroImg" class="hero_img" />
+          </div>
+        </div>
+      </section>
 </body>
 </html>
