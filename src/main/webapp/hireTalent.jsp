@@ -4,9 +4,11 @@
 <!DOCTYPE html>
 <html>
 <head>
-<meta charset="ISO-8859-1">
-<title>Job Application Portal</title>
-<link rel="stylesheet" href="style.css">
+	<meta charset="ISO-8859-1">
+	<title>Job Application System</title>
+    <link rel="stylesheet" href="hireTalent.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
 	<%
@@ -33,36 +35,45 @@
 		ResultSet rs = statement.executeQuery(query);
 	%>
 
-	<section>
-		<div class="search-bar">
-			<div class="search-links" style="display: flex; justify-content: center; align-items: center; flex-wrap: wrap;">
-				<a href="index.jsp">Home</a>
-				<a href="hireTalent.jsp">Refresh</a>
-			</div>
-			<form action="hireTalent.jsp">
-                <input type="text" placeholder=">> enter only years of experience" name="search" id="search">
-                <input type="submit" value="submit" id="btn">
-            </form>
-		</div>
-		
-		<!-- job cards -->
-		<div class="jobList">
-			<% 
-				while(rs.next()) { 
-			%>
-					<div class="job-card">
-					 	<div style="padding: 0px 13px;">
-						  <h1><%= rs.getString(2)%></h1>
-				          <p>description: <%= rs.getString(3)%></p>
-				          
-				          <h3>years of experience: <%= rs.getInt(4) %> year</h3>
-				          <p>skills: <%= rs.getString(5) %></p>
-					 	</div>
-		        	</div>
-		    <%
-		    	} 
-		    %>
-		</div>
-	</section>
+	 <!-- navigation bar -->
+    <nav>
+        <input type="checkbox" id="check">
+        <label for="check" class="checkbtn">
+            <i class="fas fa-bars"></i>
+        </label>
+        <label class="logo">Job App</label>
+        <ul>
+            <li><a href="index.jsp">Home</a></li>
+            <li><a href="hireTalent.jsp">Refresh</a></li>
+        </ul>
+    </nav>
+
+    <!-- search bar  -->
+    <div class="input-box">
+        <i class="uil uil-search"></i>
+         <form action="hireTalent.jsp">
+        	<input type="text" placeholder="search by years of experience..." name="search" style="margin: 25px;"/>
+            <button type="submit" class="button">Search</button>
+        </form>
+    </div>
+
+    <!-- job cards -->
+    <section>
+        <div class="cards">
+        	<% while(rs.next()) { %>
+            <div class="card">
+                <div class="container">
+                    <img src="1.jpg" alt="job picture">
+                </div>
+                <div class="details">
+                    <h2><%= rs.getString(2)%></h2>
+	                <p>description: <%= rs.getString(3)%></p>
+	                <h3>years of experience: <%= rs.getInt(4) %> year</h3>
+	                <p>skills: <%= rs.getString(5) %></p>
+                </div>
+            </div>
+        	<% } %>
+        </div>
+    </section>
 </body>
 </html>
