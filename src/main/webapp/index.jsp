@@ -10,34 +10,33 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
-	<!-- navigation bar -->
+	 <!-- navigation bar -->
     <nav>
         <input type="checkbox" id="check">
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
         <label class="logo">Job App</label>
-        <ul>
-            <li><a href="index.jsp">Home</a></li>
-            <li><a href="index.jsp">Refresh</a></li>
-        </ul>
     </nav>
-    
-    <!-- Home page section -->
-    <section class="hero">
-        <div class="row main-container">
-          <div class="column">
-            <h2>Get Hired or Hire People For Free!</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, architecto? Consectetur enim obcaecati velit quibusdam iure, perspiciatis accusantium, voluptatibus possimus cum voluptates dolorum optio ab vitae. Praesentium voluptas quia voluptates at aperiam aliquid vitae autem!</p>
-            <div class="buttons">
-              <button class="btn"><a href="hireTalent.jsp">hire talent</a></button>
-              <button class="btn"><a href="jobPost.jsp">create new job post</a></button>
-            </div>
-          </div>
-          <div class="column">
-            <img src="2.jpg" alt="heroImg" class="hero_img" />
-          </div>
+
+    <!-- job application form  -->
+    <form action="home.jsp">
+        <h2>Login to Your Database</h2>
+        <div class="form-group fullname">
+          <label for="username">Username</label>
+          <input type="text" id="fullname" placeholder="enter your database username.." name="username">
         </div>
-      </section>
+        <div class="form-group password">
+          <label for="password">Password</label>
+          <input type="password" id="password" placeholder="enter your database password.." name="password">
+        </div>
+        <div class="form-group email">
+          <label for="portNumber">Server Port Number</label>
+          <input type="text" id="email" placeholder="enter your database server port number.." name="portNumber">
+        </div>
+        <div class="form-group submit-btn">
+          <input type="submit" value="Login">
+        </div>
+      </form>
 </body>
 </html>

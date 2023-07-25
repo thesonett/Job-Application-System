@@ -1,6 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
+<%@ include file="database.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,18 +13,6 @@
 </head>
 <body>
 	<%
-		// insertion database code
-		Class.forName("com.mysql.jdbc.Driver");
-		String username = "root";
-		String password = "";
-		String databaseName = "mydatabase";
-		String tableName = "jobApplication";
-		String URL = "jdbc:mysql://localhost:3308/" + databaseName;
-		String query = null;
-		
-		Connection connection = DriverManager.getConnection(URL, username, password);
-		Statement statement = connection.createStatement();
-		
 		// fetch data from jsp form
 		String role = request.getParameter("role");
 		String description = request.getParameter("description");
@@ -46,6 +35,6 @@
         <div class="progress"></div>
     </div>
     
-    <button class="success-home"><a href="index.jsp">Go back to home! :D</a></button>
+    <a href="index.jsp"><button class="success-home">Go back to home! :D</button></a>
 </body>
 </html>

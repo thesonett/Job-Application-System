@@ -18,7 +18,7 @@
         </label>
         <label class="logo">Job App</label>
         <ul>
-            <li><a href="index.jsp">Home</a></li>
+            <li><a href="home.jsp">Home</a></li>
             <li><a href="jobPost.jsp">Refresh</a></li>
         </ul>
     </nav>

@@ -1,6 +1,6 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
-<%@ page import="java.sql.*" %>
+<%@ include file="database.jsp" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -12,29 +12,17 @@
 </head>
 <body>
 	<%
-		// display database code
-		Class.forName("com.mysql.jdbc.Driver");
-		String username = "root";
-		String password = "";
-		String databaseName = "mydatabase";
-		String tableName = "jobApplication";
-		String URL = "jdbc:mysql://localhost:3308/" + databaseName;
-		String query = null;
-		
 		String year = request.getParameter("search");
 		if(year == null) {
 			query = "SELECT * FROM jobApplication";
 		}
 		else {
 			query = "SELECT * FROM jobApplication WHERE experience=" + year;
-		}
-		
-		Connection connection = DriverManager.getConnection(URL, username, password);
-		Statement statement = connection.createStatement();
-		
+		}		
+				
 		ResultSet rs = statement.executeQuery(query);
 	%>
-
+	
 	 <!-- navigation bar -->
     <nav>
         <input type="checkbox" id="check">
@@ -43,7 +31,7 @@
         </label>
         <label class="logo">Job App</label>
         <ul>
-            <li><a href="index.jsp">Home</a></li>
+            <li><a href="home.jsp">Home</a></li>
             <li><a href="hireTalent.jsp">Refresh</a></li>
         </ul>
     </nav>
