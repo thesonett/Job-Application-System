@@ -16,7 +16,7 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">Job App</label>
+        <label class="logo"><a href="index.jsp" style="color: white">Job App</a></label>
     </nav>
 
     <!-- job application form  -->

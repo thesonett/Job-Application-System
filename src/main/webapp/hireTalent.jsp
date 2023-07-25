@@ -13,13 +13,14 @@
 <body>
 	<%
 		String year = request.getParameter("search");
+	
 		if(year == null) {
 			query = "SELECT * FROM jobApplication";
 		}
 		else {
 			query = "SELECT * FROM jobApplication WHERE experience=" + year;
-		}		
-				
+		}
+		
 		ResultSet rs = statement.executeQuery(query);
 	%>
 	
@@ -29,7 +30,7 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">Job App</label>
+        <label class="logo"><a href="home.jsp" style="color: white">Job App</a></label>
         <ul>
             <li><a href="home.jsp">Home</a></li>
             <li><a href="hireTalent.jsp">Refresh</a></li>
@@ -42,6 +43,15 @@
          <form action="hireTalent.jsp">
         	<input type="text" placeholder="search by years of experience..." name="search" style="margin: 25px;"/>
             <button type="submit" class="button">Search</button>
+        </form>
+    </div>
+    
+    <!-- delete bar  -->
+    <div class="input-box">
+        <i class="uil uil-trash"></i>
+         <form action="deleteServlet.jsp">
+        	<input type="text" placeholder="enter job id number to delete the post..." name="jobID" style="margin: 25px;"/>
+            <button type="submit" class="button">Delete</button>
         </form>
     </div>
 
@@ -58,7 +68,8 @@
 	                <p>description: <%= rs.getString(3)%></p>
 	                <h3>years of experience: <%= rs.getInt(4) %> year</h3>
 	                <p>skills: <%= rs.getString(5) %></p>
-                </div>
+	                <h3>Job ID: <%= rs.getInt(1) %></h3>
+                </div>                
             </div>
         	<% } %>
         </div>

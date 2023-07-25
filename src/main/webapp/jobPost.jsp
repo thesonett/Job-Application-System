@@ -16,7 +16,7 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo">Job App</label>
+        <label class="logo"><a href="home.jsp" style="color: white">Job App</a></label>
         <ul>
             <li><a href="home.jsp">Home</a></li>
             <li><a href="jobPost.jsp">Refresh</a></li>
