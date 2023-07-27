@@ -29,19 +29,21 @@
         </ul>
     </nav>
     
+    <!-- The video -->
+    <video autoplay muted loop id="myVideo" controlsList="nodownload">
+      <source src="bg.mov">
+    </video>
+    
     <!-- Home page section -->
     <section class="hero">
-        <div class="row main-container">
+        <div class="row main-container" style="justify-content: center;">
           <div class="column">
-            <h2>Get Hired or Hire People For Free!</h2>
-            <p>Lorem ipsum dolor sit, amet consectetur adipisicing elit. Perferendis, architecto? Consectetur enim obcaecati velit quibusdam iure, perspiciatis accusantium, voluptatibus possimus cum voluptates dolorum optio ab vitae. Praesentium voluptas quia voluptates at aperiam aliquid vitae autem!</p>
+            <h2>Search Between More Then <span>50,000</span> Open Jobs!</h2>
+            <p>Trending Jobs Keywords: <span>Web Designer</span> <span>Web Developer</span> <span>IOS Developer</span> <span>Android Developer</span></p>
             <div class="buttons">
-              <a href="hireTalent.jsp"><button class="btn">hire talent</button></a>
-              <a href="jobPost.jsp"><button class="btn">create new job post</button></a>	  
+              <a href="hireTalent.jsp"><button class="btn">Find Job</button></a>
+              <a href="jobPost.jsp"><button class="btn">Create new job</button></a>
             </div>
-          </div>
-          <div class="column">
-            <img src="2.jpg" alt="heroImg" class="hero_img" />
           </div>
         </div>
       </section>

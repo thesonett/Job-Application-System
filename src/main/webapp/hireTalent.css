@@ -22,6 +22,7 @@ body {
     display: grid;
     place-items: center center;
     font-family: 'Ubuntu', sans-serif;
+    overflow-x: hidden;
 }
 
 /* navigation bar css  */
@@ -59,16 +60,15 @@ nav ul li a {
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
-}
-
-a.active,
-a:hover {
-    color: black;
-    transition: .5s;
-}
-
-a:hover {
     font-weight: 500;
+}
+
+a:hover {
+    color: #c877ff;
+    border-radius: 4px;
+    background: rgba(135, 38, 174, 0.3);
+    padding: 10px 17px;
+    transition: .5s;
 }
 
 .checkbtn {
@@ -122,16 +122,11 @@ a:hover {
         font-size: 20px;
     }
 
-    a:hover,
-    a.active {
-        background: none;
-        color: black;
-    }
-
     #check:checked~ul {
         left: 0;
     }
 }
+
 
 /* search bar css */
 .input-box {
@@ -162,7 +157,7 @@ a:hover {
 
 .input-box input {
     height: 100%;
-    width: 100%;
+    width: 80%;
     outline: none;
     font-size: 18px;
     font-weight: 400;
@@ -218,8 +213,7 @@ a:hover {
     padding: 20px;
     grid-gap: 40px;
     transform: scale(0.8);
-    
-    margin-top: -100px;
+    margin-top: -12vh;
 }
 
 .card {
@@ -278,4 +272,10 @@ img {
     font-size: 15px;
     line-height: 30px;
     font-weight: 400;
+}
+
+@media (max-width: 896px) {
+	.cards {
+		margin-top: -63vh;
+	}
 }

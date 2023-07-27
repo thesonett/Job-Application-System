@@ -59,16 +59,15 @@ nav ul li a {
     padding: 7px 13px;
     border-radius: 3px;
     text-transform: uppercase;
-}
-
-a.active,
-a:hover {
-    color: black;
-    transition: .5s;
-}
-
-a:hover {
     font-weight: 500;
+}
+
+a:hover {
+    color: #c877ff;
+    border-radius: 4px;
+    background: rgba(135, 38, 174, 0.3);
+    padding: 10px 17px;
+    transition: .5s;
 }
 
 .checkbtn {
@@ -120,12 +119,6 @@ a:hover {
 
     nav ul li a {
         font-size: 20px;
-    }
-
-    a:hover,
-    a.active {
-        background: none;
-        color: black;
     }
 
     #check:checked~ul {
@@ -293,7 +286,20 @@ form select:focus {
     background-color: #4a2b5f;
 }
 
+
 /* home page css */
+#myVideo {
+    position: fixed;
+    right: 0;
+    bottom: 0;
+    min-width: 100%;
+    min-height: 100%;
+    overflow: hidden;
+    filter: brightness(47%);
+    object-fit: cover;
+    z-index: -99;
+}
+
 .main-container {
     max-width: 1300px;
     width: 100%;
@@ -326,39 +332,65 @@ form select:focus {
 }
 
 .hero .row h2 {
-    font-size: 36px;
+    font-size: 3.2rem;
     margin-bottom: 16px;
 }
 
+.hero .row h2 span, .hero .row p span {
+    color: #c877ff;
+    border-radius: 4px;
+    background: rgba(135, 38, 174, 0.3);
+    padding: 0px 10px;
+}
+
+.hero .row p span {
+    padding: 5px 8px;
+    font-weight: 600;
+    font-size: 14px;
+}
+
 .hero .column {
-    width: 50%;
+    width: 70vw;
 }
 
 .buttons {
     display: flex;
-    margin-top: 25px;
-    gap: 10px;
+    justify-content: flex-start;
+    margin-top: 57px;
 }
 
 .buttons .btn {
     padding: 14px 26px;
-    border-radius: 50px;
+    background: #fff;
     border: none;
     cursor: pointer;
-    transition: all 0.3s ease;
+    transition: all 0.3s;
     text-transform: uppercase;
     font-weight: bold;
+    margin: 0 40px;
+    border: 1px solid #fff;
 }
 
+.buttons .btn a {
+    text-decoration: none;
+    color: #ffffff;
+    font-weight: bolder;
+}
+
+.buttons a {
+    background: none;
+}
 
 .buttons .btn:last-child, .buttons .btn:first-child {
-    border: 2px solid #fff;
     background: transparent;
     color: #fff;
 }
 
 .buttons .btn:last-child:hover , .buttons .btn:first-child:hover {
-    color: #333;
+    background-color: #402155;
+    border: #402155;
+    border-radius: 4px;
+    background: rgba(135, 38, 174, 0.5);
 }
 
 .hero_img {
@@ -367,7 +399,6 @@ form select:focus {
 }
 
 @media (width < 860px) {
-
     .hero {
         padding-top: 130px;
         top: 19vh;
