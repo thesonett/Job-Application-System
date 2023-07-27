@@ -35,6 +35,6 @@
         <div class="progress"></div>
     </div>
     
-    <a href="index.jsp"><button class="success-home">Go back to home! :D</button></a>
+    <a href="hireTalent.jsp"><button class="success-home">Go back to hire talent page! :D</button></a>
 </body>
 </html>

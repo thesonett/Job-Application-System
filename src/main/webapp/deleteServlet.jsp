@@ -9,9 +9,11 @@
 </head>
 <body>
 	<%
-		String jobID = request.getParameter("jobID");
+		// Retrieve the value of "jobId" parameter from the request
+		String jobId = request.getParameter("jobId");
+		System.out.println(jobId);
 	
-		query = "DELETE FROM jobApplication WHERE id=" + jobID;
+		query = "DELETE FROM jobApplication WHERE id=" + jobId;
 		statement.executeUpdate(query);
 		
 		RequestDispatcher rd = request.getRequestDispatcher("hireTalent.jsp");

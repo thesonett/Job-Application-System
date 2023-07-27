@@ -218,6 +218,8 @@ a:hover {
     padding: 20px;
     grid-gap: 40px;
     transform: scale(0.8);
+    
+    margin-top: -100px;
 }
 
 .card {
