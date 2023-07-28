@@ -1,7 +1,7 @@
 <%@ page language="java" contentType="text/html; charset=ISO-8859-1"
     pageEncoding="ISO-8859-1"%>
 <%@ page import="java.sql.*" %>
-<%@ include file="database.jsp" %>
+<%@ page import="jakarta.servlet.http.*" %>
 <!DOCTYPE html>
 <html>
 <head>
@@ -13,11 +13,16 @@
 </head>
 <body>
 	<%
+		// Retrieve values from the session
+	    HttpSession s = request.getSession();
+		Statement statement = (Statement) s.getAttribute("statement");
+	
 		// fetch data from jsp form
 		String role = request.getParameter("role");
 		String description = request.getParameter("description");
 		String experience = request.getParameter("experience");
 		String skills = request.getParameter("skills");
+		String query = null;
 		
 		query = "INSERT INTO jobApplication (role, description, experience, skills) VALUES ('" + role + "','" + description + "'," + experience + ",'" + skills + "')";    
 		

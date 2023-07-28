@@ -10,12 +10,6 @@
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
 </head>
 <body>
-	<%
-		//String username = request.getParameter("username");
-		//String password = request.getParameter("password");
-		//String portNumber = request.getParameter("portNumber");
-	%>
-
 	<!-- navigation bar -->
     <nav>
         <input type="checkbox" id="check">
@@ -25,7 +19,6 @@
         <label class="logo"><a href="home.jsp" style="color: white">Job App</a></label>
         <ul>
             <li><a href="home.jsp">Home</a></li>
-            <li><a href="index.jsp">Login</a></li>
         </ul>
     </nav>
     

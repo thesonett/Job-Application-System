@@ -20,7 +20,7 @@
     </nav>
 
     <!-- job application form  -->
-    <form action="home.jsp">
+    <form action="formServlet.jsp">
         <h2>Login to Your Database</h2>
         <div class="form-group fullname">
           <label for="username">Username</label>
