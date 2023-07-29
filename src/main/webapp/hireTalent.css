@@ -67,7 +67,6 @@ a:hover {
     color: #c877ff;
     border-radius: 4px;
     background: rgba(135, 38, 174, 0.3);
-    padding: 10px 17px;
     transition: .5s;
 }
 
@@ -178,8 +177,8 @@ a:hover {
     cursor: pointer;
 }
 
-.input-box .button:active {
-    transform: translateY(-50%) scale(0.98);
+.input-box .button:hover {
+	background: #4a2b5f;
 }
 
 /* Responsive */
@@ -213,7 +212,6 @@ a:hover {
     padding: 20px;
     grid-gap: 40px;
     transform: scale(0.8);
-    margin-top: -12vh;
 }
 
 .card {
@@ -272,10 +270,4 @@ img {
     font-size: 15px;
     line-height: 30px;
     font-weight: 400;
-}
-
-@media (max-width: 896px) {
-	.cards {
-		margin-top: -63vh;
-	}
 }

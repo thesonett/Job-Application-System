@@ -12,6 +12,7 @@
     <style>
      	<%@ include file="style.css"%>
 	</style>
+	
 </head>
 <body>
 	<!-- navigation bar -->
@@ -20,9 +21,9 @@
         <label for="check" class="checkbtn">
             <i class="fas fa-bars"></i>
         </label>
-        <label class="logo"><a href="home.jsp" style="color: white">Job App</a></label>
+        <label class="logo"><a href="userHome.jsp" style="color: white">Job App</a></label>
         <ul>
-            <li><a href="home.jsp">Refresh</a></li>
+            <li><a href="userHome.jsp">Refresh</a></li>
             <li><a href="index.jsp">Login</a></li>
         </ul>
     </nav>
@@ -39,8 +40,7 @@
             <h2>Search Between More Then <span>50,000</span> Open Jobs!</h2>
             <p>Trending Jobs Keywords: <span>Web Designer</span> <span>Web Developer</span> <span>IOS Developer</span> <span>Android Developer</span></p>
             <div class="buttons">
-              <a href="hireTalent.jsp"><button class="btn">Check Jobs</button></a>
-              <a href="jobPost.jsp"><button class="btn">Create new job</button></a>
+              <a href="userHireTalent.jsp"><button class="btn">Find Jobs</button></a>
             </div>
           </div>
         </div>

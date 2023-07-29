@@ -5,9 +5,14 @@
 <head>
 <meta charset="ISO-8859-1">
 	<title>Job Application System</title>
-    <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
     <link rel="stylesheet" href="https://unicons.iconscout.com/release/v4.0.0/css/line.css" />
+    
+    <!-- JSP way to import stylesheet -->
+    <style>
+     	<%@ include file="style.css"%>
+	</style>
+	
 </head>
 <body>
 	 <!-- navigation bar -->
@@ -21,7 +26,7 @@
 
     <!-- job application form  -->
     <form action="formServlet.jsp">
-        <h2>Login to Your Database</h2>
+        <h2>Create Your Database</h2>
         <div class="form-group fullname">
           <label for="username">Username</label>
           <input type="text" id="fullname" placeholder="enter your database username.." name="username">
@@ -36,6 +41,11 @@
         </div>
         <div class="form-group submit-btn">
           <input type="submit" value="Login">
+        </div>
+        
+        <!-- User Login -->
+        <div class="userHome-btn">
+	        <a href="userHome.jsp"><button class="user-btn" type="button">View As User</button></a>
         </div>
       </form>
 </body>
